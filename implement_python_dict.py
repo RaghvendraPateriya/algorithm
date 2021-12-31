@@ -27,8 +27,8 @@ class HashTable:
     index = self.get_hash(key)
     self.arr[index] = None
 
-# Driver Coded
-
+    
+# Driver Code
 if __name__ == "__main__":
     dictionary = HashTable()
     dictionary["age"] = 5 # Add value
