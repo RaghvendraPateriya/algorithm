@@ -44,6 +44,11 @@ Test Case:
 2. on empty or negative subarray size retun origin array.
 
 >>> print(get_maximum_sub_array_brute_force([1,2,3,4], -1))
+
+3. Subarray size is equal to array size.
+
+>>> print(get_maximum_sub_array_brute_force([1,2,3,4], 4))
+
 """
 
 
