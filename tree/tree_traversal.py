@@ -51,6 +51,7 @@ def pre_order_traversal(root_node):
         pre_order_traversal(node.left)
         pre_order_traversal(node.right)
 
+
 # In Post Order Traversal [bottom to up]
 # In Given Input Tree
 # Output: 4 -> 5 -> 2 -> 6 -> 7 -> 3 -> 1
@@ -66,8 +67,6 @@ def post_order_traversal(root_node):
         post_order_traversal(node.right)
         print(node.data)
 
-# Pre Order Traversal
-# Post Order Traversal
 
 # Print Tree Level Wise
 def traverse_tree_level_wise(root_node):
