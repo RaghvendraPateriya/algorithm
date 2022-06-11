@@ -1,5 +1,5 @@
 """
-Get the height of tree 
+Get the height of tree. 
 
 """
 
