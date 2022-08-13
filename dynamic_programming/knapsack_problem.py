@@ -14,10 +14,21 @@ Output: Maximum weight
 """
 
 def knapsack(weight, value, capacity, items):
-  
-  if item == 0 or weight > capacity:
-    return 0
-  
-  return max( kanpsack(weight, value, capacity-weight[items-1], items-1),
-             kanpsack(weight, value, capacity, items-1))
-             
+
+    # Base condition
+    if items == 0 or capacity == 0:
+        return 0
+    # Choices
+    if weight[items-1] <= capacity:
+        return max(value[items-1] + knapsack(weight, value, capacity-weight[items-1], items-1),
+                   knapsack(weight, value, capacity, items-1))
+    elif weight[items-1] > capacity:
+        return knapsack(weight, value, capacity, items - 1)
+
+
+# Driver Code
+if __name__ == '__main__':
+    value = [60, 100, 120]
+    weight = [10, 20, 30]
+    capacity = 50
+    print(knapsack(weight, value, capacity, 3))
