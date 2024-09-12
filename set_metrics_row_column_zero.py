@@ -37,17 +37,19 @@ One special case:
 if we find any element is zero in the first row & column we need to mark all elements zero.
 """
 
-def set_metrics_row_column_zero(metrics: list(list))-> list(list):
-  m = len(metrics) # row count
-  n = len(metrics[0] # column count
-  first_row_marker_zero = false
-  first_column_marker_zero = false
 
-  # Check if first row or column is zero
+def set_metrics_row_column_zero(metrics):
+  m = len(metrics) # row count
+  n = len(metrics[0]) # column count
+  first_row_marker_zero = False
+  first_column_marker_zero = False
+
+  # Check if the first row or column is zero
   for i in range(0, m):
     if metrics[i][0]==0:
       first_row_marker_zero=True
       break
+
   for j in range(0, n):
     if metrics[0][j]==0:
       first_column_marker_zero=True
@@ -59,11 +61,11 @@ def set_metrics_row_column_zero(metrics: list(list))-> list(list):
         metrics[i][0]=0
         metrics[0][j]=0
 
-  # based on first row/column mark all element zero
+  # based on the first row/column mark all elements zero
   for i in range(0, m):
     for j in range(0, n):
-    if metrics[i][0]==0 or metircs[0][j]==0
-      metrics[i][j]=0
+      if metrics[i][0]==0 or metrics[0][j]==0:
+        metrics[i][j]=0
   
   # Mark first row/column zero is zero markers are set to true
   if first_row_marker_zero:
@@ -73,5 +75,9 @@ def set_metrics_row_column_zero(metrics: list(list))-> list(list):
   if first_column_marker_zero:
     for j in range(0, n):
       metrics[0][j]=0
-  
 
+  return metrics
+test_metrics = [[1,1,1],[1,0,1],[1,1,1]] # o/p [[1, 0, 1], [0, 0, 0], [1, 0, 1]]
+test_metrics2 = [[0,1,2,0],[3,4,5,2],[1,3,1,5]] # o/p [[0,0,0,0],[0,0,0,0],[0,0,0,0]]
+
+print(set_metrics_row_column_zero(test_metrics2))
