@@ -62,8 +62,8 @@ def set_metrics_row_column_zero(metrics):
         metrics[0][j]=0
 
   # based on the first row/column mark all elements zero
-  for i in range(0, m):
-    for j in range(0, n):
+  for i in range(1, m):
+    for j in range(1, n):
       if metrics[i][0]==0 or metrics[0][j]==0:
         metrics[i][j]=0
   
@@ -78,6 +78,6 @@ def set_metrics_row_column_zero(metrics):
 
   return metrics
 test_metrics = [[1,1,1],[1,0,1],[1,1,1]] # o/p [[1, 0, 1], [0, 0, 0], [1, 0, 1]]
-test_metrics2 = [[0,1,2,0],[3,4,5,2],[1,3,1,5]] # o/p [[0,0,0,0],[0,0,0,0],[0,0,0,0]]
+test_metrics2 = [[0,1,2,0],[3,4,5,2],[1,3,1,5]] # o/p [[0,0,0,0],[0,4,5,0],[0,3,1,0]]
 
 print(set_metrics_row_column_zero(test_metrics2))
