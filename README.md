@@ -5,6 +5,11 @@
   - Single Linked List
   - Circular LinkedList
   - Hash Table
+* Heap
+    - Min
+    - Max
+* Tries
+* Graph  
 
 ## Pattern
 * Two Pointer
