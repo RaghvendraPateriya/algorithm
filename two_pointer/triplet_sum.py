@@ -44,4 +44,4 @@ def get_3_sum(array: list, target_sum: int)-> list[list]:
                 result.add(tuple(sorted([array[i], array[j], desired])))
     print(result)
 
-get_3_sum([-1,0,1,2,-1,-4], 0)
+get_3_sum([-1,0,1,2,-1,-4], 0) # Output {(-1, 0, 1), (-1, -1, 2)}
